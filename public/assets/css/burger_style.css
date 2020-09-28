@@ -1,0 +1,102 @@
+h1 {
+    color: rgb(207, 1, 1);
+    text-align: center;
+    margin-top: 40px;
+}
+h2 {
+    text-align: center;
+}
+
+body {
+    background-color: rgb(250, 194, 91);
+}
+
+ul {
+    line-height: 150%;
+}
+
+.burger-container {
+    display: flex;
+}
+
+.newBurgers {
+    background-color: rgb(236, 14, 14);
+    /* color: white; */
+    padding: 5px;
+    padding-left: 5%;
+    width: 50%;
+    border-radius: 20px;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.devouredBurgers {
+    background-color: rgb(255, 234, 42);
+    padding: 5px;
+    padding-left: 5%;
+    width: 50%;
+    border-radius: 20px;
+    margin-right: 2%;
+}
+
+.create-form {
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
+    background-color: rgb(229, 226, 226);
+    width: 35%;
+    padding: 15px;
+    padding-top: 20px;
+    border-radius: 10px;
+}
+#burgerName {
+    margin: auto;
+}
+
+.form-button {
+    margin: 10px;
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 8px;
+    border-radius: 3px;
+}
+
+.change-devour {
+    border: none;
+    border-radius: 3px;
+}
+
+@media only screen and (max-width: 550px) {
+    .burger-container {
+        flex-wrap: wrap;
+    }
+    .newBurgers {
+        width: 100%;
+        margin: auto;
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-bottom: 20px;
+    }
+    
+    .devouredBurgers {
+        width: 100%;
+        margin: auto;
+        margin-left: 3%;
+        margin-right: 3%;
+
+    }
+    .create-form {
+        width: 60%;
+        margin: auto;
+        text-align: center;
+        margin-top: 30px;
+        background-color: rgb(229, 226, 226);
+        padding: 15px;
+        padding-top: 20px;
+        border-radius: 10px;
+    }
+    #burgerName {
+        margin: auto;
+    }
+  }

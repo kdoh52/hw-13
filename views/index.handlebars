@@ -1,19 +1,37 @@
 <h1>Eat-Da-Burger!</h1>
 
-<h3>Add and track your burger cravings!</h3>
+<img src="../public/assets/img/burger-white.jpg" alt="burger-image">
 
-<ul>
-  {{#each burgers}}
-  	<li>
-  	   <p>ID: {{this.id}}</p>
-       <p>Burger: {{this.burger_name}}</p>
-       <p>Devoured: {{this.devoured}}</p>
-  	</li>
-  {{/each}}
-</ul>
+<h2>Add and track your burger cravings!</h2>
 
-<form action="/" method="POST">
-	<textarea type="text" name="burger"></textarea>
+<div class="burger-container">
+	<div class="newBurgers">
+		<h3>New</h3>
+		<ul>
+		{{#each burgers}}
+			{{#unless devoured}}
+			{{> burgers/burger-block devoured=true}}
+			{{/unless}}
+		{{/each}}
+		</ul>
+	</div>
 
-	<button type="submit">Submit</button>
+	<div class="devouredBurgers">
+		<h3>Devoured</h3>
+		<ul>
+		{{#each burgers}}
+			{{#if devoured}}
+			{{> burgers/burger-block devoured=false}}
+			{{/if}}
+		{{/each}}
+		</ul>
+	</div>
+</div>
+
+<form class="create-form">
+	<div class="form-group">
+		<label for="burgerName">New Burger:</label>
+		<input type="text" id="burgerName" name="burgerName">
+	</div>
+	<button class="form-button" type="submit">Add Burger</button>
 </form>
