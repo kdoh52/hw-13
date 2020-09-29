@@ -4,32 +4,6 @@ let burger = require("../models/burger.js");
 
 var router = express.Router();
 
-// var exphbs = require("express-handlebars");
-
-// // SET UP ROUTING
-// let app = express();
-// var PORT = process.env.PORT || 8080;
-
-// app.use(express.urlencoded({ extended: true }));
-// app.use(express.json());
-
-// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-// app.set("view engine", "handlebars");
-
-
-// // app.get("/", function(req, res) {
-// //     connection.query("SELECT * FROM burgers;", function(err, data) {
-// //       if (err) throw err;
-  
-// //       res.render("index", { burgers: data });
-// //     });
-// // });
-
-
-// app.listen(PORT, function() {
-//     console.log("Server listening on: http://localhost:" + PORT);
-// });
-
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
@@ -37,7 +11,7 @@ router.get("/", function(req, res) {
       var hbsObject = {
         burgers: data
       };
-      console.log(hbsObject);
+      // console.log(hbsObject);
       res.render("index", hbsObject);
     });
 });
@@ -52,7 +26,7 @@ router.post("/api/burgers", function(req, res) {
 router.put("/api/burgers/:id", function(req, res) {
     var condition = "id = " + req.params.id;
   
-    console.log("condition", condition);
+    // console.log("condition", condition);
   
     burger.updateOne(
       {
@@ -66,7 +40,6 @@ router.put("/api/burgers/:id", function(req, res) {
           return res.status(404).end();
         }
         res.status(200).end();
-  
       }
     );
 });

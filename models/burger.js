@@ -14,11 +14,6 @@ var burger = {
         cb(res);
       });
     },
-    // updateOne: function(colToSet, setVal, colToSearch, valOfCol, cb) {
-    //   orm.updateOne("burgers", colToSet, setVal, colToSearch, valOfCol, function(res) {
-    //     cb(res);
-    //   });
-    // },
     updateOne: function(objColVals, condition, cb) {
       orm.updateOne("burgers", objColVals, condition, function(res) {
         cb(res);
