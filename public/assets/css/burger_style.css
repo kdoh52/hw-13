@@ -52,6 +52,13 @@ ul {
 #burgerName {
     margin: auto;
 }
+.burgerImage {
+    width: 20%;
+    height: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .form-button {
     margin: 10px;
